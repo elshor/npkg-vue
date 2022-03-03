@@ -1,0 +1,6 @@
+{
+	"name":"npkgvue",
+	"file":"src/app.js,node_modules/npkg-core/src/*.js",
+	"uploadPath":"./dist",
+	"entrypoint":"main.js"
+}

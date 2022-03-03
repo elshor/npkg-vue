@@ -1,0 +1,70 @@
+.n-placeholder-btn:hover{
+	transform: scale(1.5) !important;
+	transition: transform 200ms !important;
+	background-color: rgba(0,0,0,0) !important;
+	color:#531793 !important;
+	cursor:pointer !important;
+	border:none !important;
+}
+.n-placeholder-btn,.n-placeholder-btn:active,.n-placeholder-btn:focus,.n-placeholder-btn::selection{
+	background-color:white !important;
+	color:#579317 !important;
+	border:none !important;
+	margin: 7px !important;
+	max-width: 18px !important;
+	max-height: 18px !important;
+	border-radius: 8px !important;
+	box-shadow: 1px 1px 2px white !important;
+}
+.placeholder-menu-header{
+	color:white !important;
+}
+.n-placeholder-btn svg{
+	position: relative !important;
+}
+.n-placeholder-menu{
+	overflow-y:auto;
+	max-height:20em;
+	z-index: 1070 !important;
+}
+.n-placeholder-menu[data-show="true"]{
+	display:block;
+}
+.n-placeholder{
+	max-width: 32px;
+	max-height: 32px;
+	display: flex;
+	flex-grow: 0 !important;
+}
+.n-placeholder-icon{
+  color: #579317;
+	transition: transform 200ms !important;
+  font-size: 150%;
+ 	position: relative !important;  
+}
+.n-placeholder-icon:hover{
+  transform: scale(1.5) !important;
+	transition: transform 200ms !important;
+	background-color: rgba(0,0,0,0) !important;
+	color:#531793 !important;
+	cursor:pointer !important;
+	border:none !important;
+}
+
+.n-placeholder-menu .dropdown-header{
+  margin-top: -8px;
+  font-size: 1em;
+}
+.n-placeholder-menu{
+  font-size: 1em !important;
+}
+.n-viewport-overlay{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	width:100vw;
+	height: 100vh;
+	display:none;
+	z-index: 1040;
+  background-color: rgba(0,0,0,0.1);
+}
