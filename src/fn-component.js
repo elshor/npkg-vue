@@ -228,7 +228,7 @@ function getRenderInputFromScript(spec,npath){
  * @param {*} spec 
  */
 function getData(spec,npath){
-	const ref = spec.display? spec.display.ref : null;
+	const ref = spec.ref;
 	
 	const props = Object.entries(spec.props||{}).map(
 		entry=>dataEntry(entry,(npath||'')+'/props'));
