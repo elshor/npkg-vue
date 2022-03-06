@@ -237,7 +237,7 @@ function getData(spec,npath){
 		.map(entry=>dataEntry(entry,(npath||'')+'/display'));
 	const style = (spec.style||[]).map(entry=>styleEntry(entry));
 	const attrs = Object.entries(spec.attrs||{}).map(dataEntry);
-	const on = Object.entries(spec.events||{}).map(entry=>dataEntry(entry,null,true));
+	const on = Object.entries(spec.on||{}).map(entry=>dataEntry(entry,null,true));
 	const classes = (spec.classes||[]).map((item,index)=>dataEntry([index,item]));
 	if(spec.$path){
 		props.push({key:'naturaPath',value:spec.$path});
