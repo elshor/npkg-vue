@@ -215,7 +215,7 @@ function getRenderInputFromScript(spec,npath){
 		})
 	}
 	
-	const children = (spec.children||[]).map((child,index)=>
+	const children = (asArray(spec.children)).map((child,index)=>
 		getRenderInputFromScript(child,(npath||'')+'/children/'+index)
 	);
 	
@@ -311,7 +311,7 @@ function processSlots(data,entry,children,npath){
 		if(element){
 			const slotEntry = slots[key];
 			element.data.slot = slotEntry.name || 'default';
-			children.push(element);
+			children.push(... asArray(element));
 		}
 	});
 }
@@ -391,5 +391,16 @@ class Context{
 		const newData = Object.create(this.data);
 		Object.assign(newData,data);
 		return new Context(newData)
+	}
+}
+
+function asArray(input){
+	if(input === undefined){
+		return [];
+	}
+	if(Array.isArray(input)){
+		return input;
+	}else{
+		return [input];
 	}
 }
