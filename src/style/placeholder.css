@@ -24,12 +24,21 @@
 }
 .n-placeholder-menu{
 	overflow-y:auto;
+	visibility: initial;
+	opacity: initial;
 	max-height:20em;
 	z-index: 1070 !important;
 }
 .n-placeholder-menu[data-show="true"]{
 	display:block;
 }
+.n-placeholder-menu li a{
+	color:black !important;
+}
+.n-placeholder-menu li{
+	width: initial;
+}
+
 .n-placeholder{
 	max-width: 32px;
 	max-height: 32px;
@@ -41,6 +50,8 @@
 	transition: transform 200ms !important;
   font-size: 150%;
  	position: relative !important;  
+	background-color: white;
+	border-radius: 12px;
 }
 .n-placeholder-icon:hover{
   transform: scale(1.5) !important;
