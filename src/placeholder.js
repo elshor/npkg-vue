@@ -76,7 +76,6 @@ const placeholder = {
 					class:'n-placeholder-icon ' + calcSize(vm.size),
 					on:{
 						click(evt){
-							console.log('got click on placeholder',evt);
 							if(vm.shouldShow){
 								vm.hide();
 							}else if(vm.suggestions.list.length === 1){
@@ -147,7 +146,7 @@ const placeholder = {
 			})
 			suggestions.unshift(
 				h(BDropdownHeader,{style:{backgroundColor:'#531793'}},[
-					h('span',{class:'placeholder-menu-header'},'Select component to insert')
+					h('span',{class:'placeholder-menu-header'},'Select component')
 				]),
 			);
 			return suggestions;
