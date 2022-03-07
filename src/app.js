@@ -8,6 +8,7 @@ import { fnComponent } from './fn-component';
 import './placeholder';
 import './style/placeholder.css'
 export * from 'npkg-core';
+window.vue = Vue;
 /**
  * Dynamic component represents a reactive component
  * @typedef DynamicComponent
@@ -26,7 +27,7 @@ export * from 'npkg-core';
 * @param {AppExtension[]} extensions Extensions add functionality to the web application (role:type)
 * @additional packages
 * @display tabs
-* @show info,data,components,extensions
+* @show info,data,component,extensions
 * @useContext data
 **/
 export function FrontEndScript(name,description,component,packages,data,extensions){
