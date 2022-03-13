@@ -2,7 +2,7 @@
  *   Copyright (c) 2021 DSAS Holdings LTD.
  *   All rights reserved.
  */
-import { BDropdownHeader, BIconPlusCircle, BDropdownItem} from 'bootstrap-vue'
+import { BDropdownHeader, BIconPlusCircle, BDropdownItem, BIconCamera, BIconCameraFill} from 'bootstrap-vue'
 import { isDevMode } from './utils';
 import { VBTooltip } from 'bootstrap-vue';
 import { createPopper } from '@popperjs/core'
@@ -113,6 +113,10 @@ const placeholder = {
 		renderSuggestions(h,naturaPath){
 			const vm=this;
 			const suggestions = (this.suggestions.list||[]).map(entry=>{
+				let title = entry.description;
+				if(entry.screenshot){
+					title += `<img src="${encodeURI(entry.screenshot)}" class="n-suggestion-screenshot" />`
+				}
 				return h(
 					BDropdownItem,{
 						on:{
@@ -129,7 +133,9 @@ const placeholder = {
 							{
 								name:'b-tooltip',
 								value:{
-									title:entry.description,
+									title,
+									html:true,
+									customClass:'n-suggestion-tooltip',
 									boundary:'viewport',
 									placement:'left',
 									trigger:'hover',
@@ -141,7 +147,12 @@ const placeholder = {
 							}
 						]
 					},
-					entry.text
+					[
+						h('span',{},[
+							entry.text
+						]),
+						entry.screenshot? h(BIconCameraFill,{class:'n-screenshot-icon'}):undefined
+					]					
 				);
 			})
 			suggestions.unshift(
