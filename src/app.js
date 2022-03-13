@@ -34,7 +34,11 @@ export function FrontEndScript(name,description,component,packages,data,extensio
 	if(document.readyState !== 'loading'){
 		const element = document.querySelector('#app')||
 			document.querySelector('[data-npath="/component"]');
-		mountVue(element,__natura.script.component);
+		if(element){
+			mountVue(element,__natura.script.component);
+		}else{
+			console.error('Could not find element to mount')
+		}
 		initExtensions(extensions);
 	}else{
 		window.addEventListener('DOMContentLoaded', () => {
