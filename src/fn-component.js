@@ -66,7 +66,7 @@ function renderInput(input,thisObject,h,parentInput){
 		return renderInput(child,thisObject,h,input);
 	});
 
-	processPlaceholders(children,input.entry,h,data.props.naturaPath);
+	processPlaceholders(children,input.entry,h,data.props.naturaPath,input.usedSlots);
 
 	//generate vdome
 	const ret = h(input.comp,data,children);
@@ -219,8 +219,8 @@ function getRenderInputFromScript(spec,npath){
 		getRenderInputFromScript(child,(npath||'')+'/children/'+index)
 	);
 	
-	processSlots(data,entry,children,npath)
-	return {comp,data,children,condition,entry,spec};
+	const usedSlots = processSlots(data,entry,children,npath)
+	return {comp,data,children,condition,entry,spec,usedSlots};
 }
 
 /**
@@ -298,22 +298,25 @@ function calcRef(name,thisObject){
 }
 
 function processSlots(data,entry,children,npath){
+	const ret = [];
 	if(!entry || !entry.options || !entry.options.slots){
-		return;
+		return ret;
 	}
 	const slots = entry.options.slots;
 	data.props = data.props.filter(({key,value})=>{
-		if(!slots[key]){
+		const slotEntry = slots[key];
+		if(!slotEntry){
 			//this prop is not a slot
 			return true;
 		}
+		ret.push(slotEntry.name);
 		const element = getRenderInputFromScript(value,npath? (npath+'/props/'+key):null);
 		if(element){
-			const slotEntry = slots[key];
 			element.data.slot = slotEntry.name || 'default';
 			children.push(... asArray(element));
 		}
 	});
+	return ret;
 }
 
 function fn(spec,npath,isCallback){
@@ -349,19 +352,25 @@ function processStateProps(data,entry,thisObject,spec){
 	}
 }
 
-function processPlaceholders(children,entry,h,path=''){
+function processPlaceholders(children,entry,h,path='',usedSlots){
 	//this function assumes a vue component named plaeholder is registered
 	if(isDevMode() && getLibOption(entry,'placeholders')){
 		getLibOption(entry,'placeholders').forEach(ph=>{
+			if(ph.slot && (usedSlots||[]).includes(ph.slot)){
+				//this slot is not missing - don't add it
+				return;
+			}
+			const relativePath = (ph.prop||ph.slot)? '/props/' + (ph.prop||ph.slot) : '/children/-1'
 			children.push(h(
 				'placeholder',
 				{
 					props:{
 						tooltip:ph.tooltip,
 						size:ph.size,
-						naturaPath:path + '/children/-1'
+						naturaPath:path + relativePath
 					},
-					class:ph.class
+					class:ph.class,
+					slot:ph.slot
 				}
 			))
 		})
