@@ -9,6 +9,7 @@ import './placeholder';
 import './style/placeholder.css'
 export * from 'npkg-core';
 window.vue = Vue;
+let mountedVueInstance = null;
 /**
  * Dynamic component represents a reactive component
  * @typedef DynamicComponent
@@ -32,12 +33,13 @@ window.vue = Vue;
 **/
 export function FrontEndScript(name,description,component,packages,data,extensions){
 	if(document.readyState !== 'loading'){
-		const element = document.querySelector('#app')||
+		const element =  
+			document.querySelector('#app')||
 			document.querySelector('[data-npath="/component"]');
 		if(element){
 			mountVue(element,__natura.script.component);
 		}else{
-			console.error('Could not find element to mount')
+			console.error('Could not find element to mount. last mounted element',lastMountedElement);
 		}
 		initExtensions(extensions);
 	}else{
@@ -53,7 +55,11 @@ export function FrontEndScript(name,description,component,packages,data,extensio
 
 function mountVue(element,script){
 	ensureNatuarEditObservable();
-	new Vue({
+	if(mountedVueInstance){
+		//already mounted - no need to mount again
+		return;
+	}
+	mountedVueInstance = new Vue({
 		mounted(){
 			//need to update view after mounted so components that reference other componets will be able to retreive the component object. In first round, the $root.$refs is still empty
 			const vm = this;
@@ -79,7 +85,7 @@ function mountVue(element,script){
 		},
 		watch:{
 			editId(_id){
-				this.generatedRenderFunction = fnComponent(script,'/component');
+				this.generatedRenderFunction = fnComponent(__natura.script.component,'/component');
 				this.$forceUpdate();
 			},
 		}	
