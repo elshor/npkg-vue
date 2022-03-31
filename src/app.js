@@ -39,7 +39,7 @@ export function FrontEndScript(name,description,component,packages,data,extensio
 		if(element){
 			mountVue(element,__natura.script.component);
 		}else{
-			console.error('Could not find element to mount. last mounted element',lastMountedElement);
+			console.error('Could not find element to mount.');
 		}
 		initExtensions(extensions);
 	}else{
