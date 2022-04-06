@@ -9,6 +9,7 @@ import './placeholder';
 import './style/placeholder.css'
 export * from 'npkg-core';
 window.vue = Vue;
+window.Vue = Vue;
 let mountedVueInstance = null;
 /**
  * Dynamic component represents a reactive component
@@ -59,7 +60,7 @@ function mountVue(element,script){
 		//already mounted - no need to mount again
 		return;
 	}
-	mountedVueInstance = new Vue({
+	const options = {
 		mounted(){
 			//need to update view after mounted so components that reference other componets will be able to retreive the component object. In first round, the $root.$refs is still empty
 			const vm = this;
@@ -89,9 +90,18 @@ function mountVue(element,script){
 				this.$forceUpdate();
 			},
 		}	
-	}).$mount(element)
+	};
+	
+	//look for plugins
+	(window.__naturaPlugins||[]).forEach(plugin=>{
+		if(typeof plugin.initMountedVue === 'function'){
+			plugin.initMountedVue(options);
+		}
+	});
+	
+	mountedVueInstance = new Vue(options);
+	mountedVueInstance.$mount(element)
 }
-
 
 //register global vue mixin to manage connection with editor
 Vue.mixin(globalMixin)
