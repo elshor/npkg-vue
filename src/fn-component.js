@@ -4,7 +4,6 @@
  *   All rights reserved.
  */
 
-import Vue from "vue";
 import { isDevMode } from "./utils";
 
 function addEntries(target,source){
@@ -148,9 +147,6 @@ function calcData(data,thisObject,parentData,entry,spec){
 	if(data.slot){
 		ret.slot = data.slot;
 	}
-
-	//process state props
-	//processStateProps(ret,entry,thisObject,spec)
 
 	//in devMode - set dev default
 	if(isDevMode() && getLibOption(entry,'devDefault')){
@@ -331,24 +327,6 @@ function fn(spec,npath,isCallback){
 function getLibOption(entry,name){
 	if(entry && entry.options && entry.options[name]){
 		return entry.options[name];
-	}
-}
-
-function processStateProps(data,entry,thisObject,spec){
-	if(entry && entry.options && entry.options.state){
-		const access = `${spec.$id}-value`;
-			
-		//set context value if doesn't exist yet
-		if(!Object.getOwnPropertyDescriptor(thisObject,access)){
-			Vue.set(thisObject,access,null);
-		}
-		data.model = {
-			value:thisObject[access],
-			expression:access,
-			callback(value){
-				thisObject[access] = value;
-			}
-		}
 	}
 }
 
