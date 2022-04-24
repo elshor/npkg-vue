@@ -1,7 +1,7 @@
 {
-  "name": "npkg-vue",
+  "name": "npkg-vue3",
   "version": "1.0.0",
-  "description": "Natura package for building Vue applications",
+  "description": "Natura package for building Vue3 applications",
   "main": "src/app.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode development &&  node \"c:\\Users\\eshor\\Dropbox (Arza Winery)\\dev\\natura-pkg\"",
@@ -15,9 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "@popperjs/core": "^2.11.2",
-    "bootstrap-vue": "^2.21.2",
     "npkg-core": "file:../npkg-core",
-    "vue": "^2.6.14"
+    "vue": "^3"
   },
   "devDependencies": {
     "css-loader": "^6.6.0",

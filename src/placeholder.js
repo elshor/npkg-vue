@@ -2,21 +2,14 @@
  *   Copyright (c) 2021 DSAS Holdings LTD.
  *   All rights reserved.
  */
-import { BDropdownHeader, BIconPlusCircle, BDropdownItem, BIconCamera, BIconCameraFill} from 'bootstrap-vue'
 import { isDevMode } from './utils';
-import { VBTooltip } from 'bootstrap-vue';
 import { createPopper } from '@popperjs/core'
-
-import Vue from 'vue'
 
 const cache = {
 }
 
-const placeholder = {
+export const Placeholder = {
 	name:'placeholder',
-	directives:{
-		'b-tooltip':VBTooltip
-	},
 	props:[
 		'container',//name of the container to show in tooltip
 		'tooltip',
@@ -71,9 +64,9 @@ const placeholder = {
 				}]
 			},
 			[
-				h(BIconPlusCircle,{
+				h('i',{
 					ref:'trigger',
-					class:'n-placeholder-icon ' + calcSize(vm.size),
+					class:'fa-solid fa-circle-plus n-placeholder-icon ' + calcSize(vm.size),
 					on:{
 						click(evt){
 							if(vm.shouldShow){
@@ -209,5 +202,3 @@ function calcSize(s){
 	}
 }
 
-export default placeholder;
-Vue.component('placeholder',placeholder);

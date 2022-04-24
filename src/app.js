@@ -2,15 +2,18 @@
  *   Copyright (c) 2021 DSAS Holdings LTD.
  *   All rights reserved.
  */
-import Vue from 'vue'
+import * as VuePackage from 'vue'
 import globalMixin from './global-mixin';
 import { fnComponent } from './fn-component';
 import './placeholder';
 import './style/placeholder.css'
 export * from 'npkg-core';
-window.vue = Vue;
-window.Vue = Vue;
+export {Page} from './page';
+import {Placeholder} from './placeholder'
+
+window.vue = VuePackage;
 let mountedVueInstance = null;
+const {createApp,reactive,h,} = VuePackage;
 /**
  * Dynamic component represents a reactive component
  * @typedef DynamicComponent
@@ -73,7 +76,7 @@ function mountVue(element,script){
 				context:{$root:vm}
 			}
 		},
-		render(h){
+		render(){
 			if(this.generatedRenderFunction){
 				// @ts-ignore
 				return this.generatedRenderFunction.call(this.context,h);
@@ -92,24 +95,23 @@ function mountVue(element,script){
 		}	
 	};
 	
-	//look for plugins
+	//look for initMountedVue plugins
 	(window.__naturaPlugins||[]).forEach(plugin=>{
 		if(typeof plugin.initMountedVue === 'function'){
 			plugin.initMountedVue(options);
 		}
 	});
 	
-	mountedVueInstance = new Vue(options);
-	mountedVueInstance.$mount(element)
+	mountedVueInstance = createApp(options);
+	mountedVueInstance.component('placeholder',Placeholder);
+	mountedVueInstance.mixin(globalMixin);
+	mountedVueInstance.mount(element)
 }
-
-//register global vue mixin to manage connection with editor
-Vue.mixin(globalMixin)
 
 //make naturaEdit observable
 function ensureNatuarEditObservable(){
 	if(window.__naturaEdit){
-		window.__naturaEdit = Vue.observable(__naturaEdit)
+		window.__naturaEdit = reactive(__naturaEdit)
 	}
 }
 

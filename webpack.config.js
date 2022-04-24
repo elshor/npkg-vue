@@ -6,7 +6,7 @@ module.exports = {
 	entry:'./src/app.js',
 	output:{
 		library:{
-			name:'npkgvue',
+			name:'npkgvue3',
 			type:'umd2'
 		}
 	},

@@ -1,7 +1,7 @@
 {
-	"name":"npkgvue",
-	"file":"src/app.js,node_modules/npkg-core/src/*.js",
+	"name":"npkgvue3",
+	"file":"src/app.js,node_modules/npkg-core/src/*.js,src/page.js",
 	"uploadPath":"./dist",
 	"entrypoint":"main.js",
-	"umdName":"npkgvue"
+	"umdName":"npkgvue3"
 }

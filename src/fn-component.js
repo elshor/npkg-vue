@@ -3,8 +3,9 @@
  *   Copyright (c) 2021 DSAS Holdings LTD.
  *   All rights reserved.
  */
-
+import {getRenderInputFromScript} from './prepare-render-function'
 import { isDevMode } from "./utils";
+import {h} from 'vue'
 
 function addEntries(target,source){
 	source = source || {};
@@ -16,7 +17,7 @@ export function fnComponent(spec,npath){
 		return undefined;
 	}
 	const input = getRenderInputFromScript(spec,npath);
-	return function(h,thisObject=null,overrideProps={},overrideData={}){
+	return function(_,thisObject=null,overrideProps={},overrideData={}){
 		input.data.key = overrideData.key || input.data.key;
 		input.data.slot = overrideData.slot || input.data.slot;
 		input.data.ref = overrideData.ref || input.data.ref;
@@ -61,12 +62,7 @@ function renderInput(input,thisObject,h,parentInput){
 	data._sid = input.spec.$id;
 
 	//render children
-	const children = input.children.map(child=>{
-		return renderInput(child,thisObject,h,input);
-	});
-
-	processPlaceholders(children,input.entry,h,data.props.naturaPath,input.usedSlots);
-
+	const children = renderChildren.bind(this,input,thisObject,h,data);
 	//generate vdome
 	const ret = h(input.comp,data,children);
 	
@@ -86,6 +82,15 @@ function renderInput(input,thisObject,h,parentInput){
 	}
 	
 	return ret;
+}
+
+function renderChildren(input,thisObject,h,data){
+	const children = input.children.map(child=>{
+		return renderInput(child,thisObject,h,input);
+	});
+
+	processPlaceholders(children,input.entry,h,data.naturaPath,input.usedSlots);
+	return children;
 }
 
 function calcObject(entries,thisObject,isEvents=false){
@@ -135,14 +140,19 @@ function calcValue(fn,thisObject){
  * @returns {Object}
  */
 function calcData(data,thisObject,parentData,entry,spec){
-	const ret = {
-		props: calcObject(data.props,thisObject),
-		style: calcObject(data.style,thisObject),
-		attrs: calcObject(data.attrs,thisObject),
-		on: calcObject(data.on,thisObject,true),
-		class:Object.values(calcObject(data.classes,thisObject)),
-		ref:calcRef(data.ref,thisObject)
+	const ret = calcObject(data.props,thisObject);
+	const styleObject = calcObject(data.style,thisObject);
+	if(Object.keys(styleObject).length > 0){
+		ret.style = styleObject;
 	}
+	ret.class = Object.values(calcObject(data.classes,thisObject));
+	Object.entries(calcObject(data.attrs,thisObject)).forEach(([key,value])=>{
+		if(value !== undefined){
+			ret[key] = value;
+		}
+	})
+	Object.assign(ret,calcObject(data.on,thisObject,true));
+	ret.ref = calcRef(data.ref,thisObject);
 
 	if(data.slot){
 		ret.slot = data.slot;
@@ -150,19 +160,19 @@ function calcData(data,thisObject,parentData,entry,spec){
 
 	//in devMode - set dev default
 	if(isDevMode() && getLibOption(entry,'devDefault')){
-		ret.props = Object.assign({},getLibOption(entry,'devDefault'),ret.props);
+		ret = Object.assign({},getLibOption(entry,'devDefault'),ret);
 	}
 
 	//in devMode - set dev style
 	if(isDevMode() && getLibOption(entry,'devStyle')){
-		ret.style = Object.assign({},getLibOption(entry,'devStyle'),ret.style);
+		ret.style = Object.assign({},getLibOption(entry,'devStyle'),ret.style||{});
 	}
 
 	//calc npath
-	const thisPath = ret.props.naturaPath;
-	const parentPath = parentData? parentData.props.naturaPath : null;
+	const thisPath = ret.naturaPath;
+	const parentPath = parentData? parentData.naturaPath : null;
 	if(parentData && !thisPath){	
-		ret.props.naturaPath = parentPath;
+		ret.naturaPath = parentPath;
 	}
 
 	//calculate refInFor. If the parent data is refInFor then this data is also refInFor
@@ -173,114 +183,18 @@ function calcData(data,thisObject,parentData,entry,spec){
 	ret.key = data.key;
 
 	//pass context
-	ret.props.naturaContext = thisObject;
+	ret.naturaContext = thisObject;
 
 	//set data-npath
 	if(thisPath){
-		ret.attrs['data-npath'] = thisPath;
+		ret['data-npath'] = thisPath;
 	}
 	
 	return ret;
 }
 
-/**
- * 
- * @param {*} spec 
- * @param {*} elementOrId 
- * @param {*} parentData 
- * @param {*} index 
- */
-function getRenderInputFromScript(spec,npath){
-	if(!spec){
-		return undefined;
-	}
-	const entry = getLibEntry(spec)
-	const comp = entry.value;
-	const data = getData(spec,npath);
 
-	//check if there is a condition for display
-	const condition = spec && spec.display && spec.display.displayCondition? 
-		fn(spec.display.displayCondition,true) :
-		undefined;
-	
-		//check for npath
-	if(npath){
-		data.props.push({
-			key:'naturaPath',
-			value:npath
-		})
-	}
-	
-	const children = (asArray(spec.children)).map((child,index)=>
-		getRenderInputFromScript(child,(npath||'')+'/children/'+index)
-	);
-	
-	const usedSlots = processSlots(data,entry,children,npath)
-	return {comp,data,children,condition,entry,spec,usedSlots};
-}
 
-/**
- * Given a component spec, return a data object later used to generate the data for createElement function. The spec is the script object describing the component instance
- * @param {*} spec 
- */
-function getData(spec,npath){
-	const ref = spec.ref;
-	
-	const props = Object.entries(spec.props||{}).map(
-		entry=>dataEntry(entry,(npath||'')+'/props'));
-	const display = Object.entries(spec.display||{})
-		.filter(([key])=>key!=='ref')//ignore ref property
-		.map(entry=>dataEntry(entry,(npath||'')+'/display'));
-	const style = (spec.style||[]).map(entry=>styleEntry(entry));
-	const attrs = Object.entries(spec.attrs||{}).map(dataEntry);
-	const on = Object.entries(spec.on||{}).map(entry=>dataEntry(entry,null,true));
-	const classes = (spec.classes||[]).map((item,index)=>dataEntry([index,item]));
-	if(spec.$path){
-		props.push({key:'naturaPath',value:spec.$path});
-	}
-	if(ref){
-		props.push({key:'nref',value:ref});
-		attrs.push({key:'data-nref',value:ref});
-	}
-	attrs.push({key:'data-ntype',value:spec.$type||'component'});
-	
-	return {props:props.concat(display),style,ref,attrs,on,classes}
-}
-
-/**
- * A data entry is an object with key,value,fn that is used to generate in render time an object. If fn === value then the value is `value`. Otherwise, assume fn is a function calculating value
- */
-function dataEntry([key,value],npath,isCallback=false){
-	return {
-		key,
-		value,
-		fn:fn(value,(npath||'')+'/' + key,isCallback)
-	}
-}
-
-function styleEntry(entry,npath){
-	if(entry.$type){
-		//this is a calculated value
-		return {fn:__natura.fn(entry)}
-	}
-	if(entry.key !== undefined){
-		//this was generated using value tag in natura properties
-		return {
-			key:entry.key,
-			fn:entry.value?__natura.fn(entry.value) : undefined
-		}
-	}
-	return {};//entry not understood
-}
-
-function getLibEntry(spec){
-	const type = spec.$type;
-	if(type && window.__natura && __natura.lib && __natura.lib[type]){
-		return __natura.lib[type];
-	}else{
-		return {};
-	}
-}
 
 function calcRef(name,thisObject){
 	if(typeof name !== 'string'){
@@ -293,36 +207,6 @@ function calcRef(name,thisObject){
 	}
 }
 
-function processSlots(data,entry,children,npath){
-	const ret = [];
-	if(!entry || !entry.options || !entry.options.slots){
-		return ret;
-	}
-	const slots = entry.options.slots;
-	data.props = data.props.filter(({key,value})=>{
-		const slotEntry = slots[key];
-		if(!slotEntry){
-			//this prop is not a slot
-			return true;
-		}
-		ret.push(slotEntry.name);
-		const element = getRenderInputFromScript(value,npath? (npath+'/props/'+key):null);
-		if(element){
-			element.data.slot = slotEntry.name || 'default';
-			children.push(... asArray(element));
-		}
-	});
-	return ret;
-}
-
-function fn(spec,npath,isCallback){
-	const ret = __natura.fn(spec,isCallback?['event']:undefined);
-	if(ret && ret.componentWrapper){
-		return fnComponent(ret.def,npath);
-	}else{
-		return ret;
-	}
-}
 
 function getLibOption(entry,name){
 	if(entry && entry.options && entry.options[name]){
@@ -355,15 +239,6 @@ function processPlaceholders(children,entry,h,path='',usedSlots){
 	}
 }
 
-function deepCopy(src){
-	//dumb deep copy
-	if(typeof src !== 'object'){
-		//no need to deep copy - this is not an object
-		return src;
-	}
-	return JSON.parse(JSON.stringify(src));
-}
-
 class Context{
 	constructor(data){
 		this.data = data;
@@ -381,13 +256,3 @@ class Context{
 	}
 }
 
-function asArray(input){
-	if(input === undefined){
-		return [];
-	}
-	if(Array.isArray(input)){
-		return input;
-	}else{
-		return [input];
-	}
-}
