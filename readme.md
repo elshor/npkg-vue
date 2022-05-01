@@ -1,6 +1,8 @@
 # npkg-vue3
 This Natura package enables building web apps using vue3
 
+This page documents the usage of the `setup` component option. If you are using Composition API with Single-File Components, [`<script setup>`](/api/sfc-script-setup.html) is recommended for a more succinct and ergonomic syntax.
+
 ## Plugins
 The following is a list of plugins that can be integrated into this package:
 * `initMountedVue(VueOptions)` - called after options are generated but before application is mounted

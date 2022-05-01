@@ -2,6 +2,7 @@
  *   Copyright (c) 2022 DSAS Holdings LTD.
  *   All rights reserved.
  */
+import { fnComponent } from "./fn-component";
 /**
  * 
  * @param {*} spec 
@@ -106,8 +107,9 @@ function styleEntry(entry,npath){
 }
 
 function processSlots(data,entry,children,npath){
-	const ret = [];
+	const ret = [];//list of used slots
 	if(!entry || !entry.options || !entry.options.slots){
+		//no slot defined
 		return ret;
 	}
 	const slots = entry.options.slots;
@@ -121,6 +123,7 @@ function processSlots(data,entry,children,npath){
 		const element = getRenderInputFromScript(value,npath? (npath+'/props/'+key):null);
 		if(element){
 			element.data.slot = slotEntry.name || 'default';
+			console.log('... element data slot is',slotEntry.name);
 			children.push(... asArray(element));
 		}
 	});

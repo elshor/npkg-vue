@@ -17,7 +17,7 @@ export default function (topComponent, spec,path){
 
 function routeEntry(naturaPath,spec,{component,name,path}={}){
 	return {
-		name: name || spec.name || spec.ref,
+		name: name || calcName(spec),
 		path: path || calcPath(spec),
 		component: component || generateComponent(spec,naturaPath),
 		children:(spec.subPages||[]).map((page,index)=>
@@ -31,5 +31,13 @@ function calcPath(spec){
 		return spec.props.path;
 	}else{
 		return spec.path || spec.name || ''
+	}
+}
+
+function calcName(spec){
+	if(spec.props && spec.props.name){
+		return spec.props.name;
+	}else{
+		return spec.name || spec.ref || ''
 	}
 }

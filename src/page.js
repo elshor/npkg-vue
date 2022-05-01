@@ -6,8 +6,9 @@ import { h } from "vue"
 
 /**
  * A page integrated into an app using the router
- * @natura component page with path <<props/path>>
+ * @natura component page <<props/name>>
  * @prop {String} path
+ * @props {String} name
  * @isa page
  * @title page
  * @children {PageContent[]} pageContent (expanded)

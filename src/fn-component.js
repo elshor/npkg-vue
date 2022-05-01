@@ -5,7 +5,7 @@
  */
 import {getRenderInputFromScript} from './prepare-render-function'
 import { isDevMode } from "./utils";
-import {h} from 'vue'
+import {h, isVNode} from 'vue'
 
 function addEntries(target,source){
 	source = source || {};
@@ -41,6 +41,12 @@ function renderInput(input,thisObject,h,parentInput){
 	if(!input){
 		return undefined;
 	}
+
+	//if this is a vnode then just return it
+	if(isVNode(input)){
+		return input;
+	}
+
 	//check if display condition exists and true
 	if(input.condition){
 		const b = input.condition.call(thisObject);
@@ -62,7 +68,7 @@ function renderInput(input,thisObject,h,parentInput){
 	data._sid = input.spec.$id;
 
 	//render children
-	const children = renderChildren.bind(this,input,thisObject,h,data);
+	const children = renderChildren(input,thisObject,h,data);
 	//generate vdome
 	const ret = h(input.comp,data,children);
 	
@@ -85,12 +91,26 @@ function renderInput(input,thisObject,h,parentInput){
 }
 
 function renderChildren(input,thisObject,h,data){
-	const children = input.children.map(child=>{
-		return renderInput(child,thisObject,h,input);
+	console.log('renderChildren',input.children.length,input.children);
+	const slots = {};
+	input.children.forEach(child=>{
+		const slot = child.data.slot || 'default';
+		if(!slots[slot]){
+			slots[slot] = [];
+		}
+		slots[slot].push(child);
 	});
 
-	processPlaceholders(children,input.entry,h,data.naturaPath,input.usedSlots);
-	return children;
+	processPlaceholders(slots,input.entry,h,data.naturaPath,input.usedSlots);
+
+	return Object.fromEntries(
+		Object.entries(slots).map(([key,value])=>{
+			return [
+				key,
+				()=>value.map(input=>renderInput(input,thisObject,h,input))
+			]
+		})
+	)
 }
 
 function calcObject(entries,thisObject,isEvents=false){
@@ -214,7 +234,7 @@ function getLibOption(entry,name){
 	}
 }
 
-function processPlaceholders(children,entry,h,path='',usedSlots){
+function processPlaceholders(slots,entry,h,path='',usedSlots){
 	//this function assumes a vue component named plaeholder is registered
 	if(isDevMode() && getLibOption(entry,'placeholders')){
 		getLibOption(entry,'placeholders').forEach(ph=>{
@@ -222,8 +242,11 @@ function processPlaceholders(children,entry,h,path='',usedSlots){
 				//this slot is not missing - don't add it
 				return;
 			}
-			const relativePath = (ph.prop||ph.slot)? '/props/' + (ph.prop||ph.slot) : '/children/-1'
-			children.push(h(
+			const relativePath = (ph.prop||ph.slot)? '/props/' + (ph.prop||ph.slot) : '/children/-1';
+			if(!slots[ph.slot||'default']){
+				slots[ph.slot||'default'] = [];
+			}
+			slots[ph.slot||'default'].push(h(
 				'placeholder',
 				{
 					props:{
