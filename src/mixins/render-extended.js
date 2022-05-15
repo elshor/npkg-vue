@@ -2,7 +2,7 @@
  *   Copyright (c) 2021 DSAS Holdings LTD.
  *   All rights reserved.
  */
-import placeholder from '../placeholder';
+import placeholder from '../components/placeholder';
 
 /**
  * 

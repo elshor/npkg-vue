@@ -26,18 +26,15 @@ export function overrideData(baseData,props={},style={},classText=''){
 	return ret;
 }
 
-export function overrideData2(baseData,override){
-	const ret = {};
-	ret.props = Object.assign({},baseData.props,override.props);
-	ret.class = ((baseData.class||'') + ' ' + override.class);
-	ret.style = Object.assign({},baseData.style,override.style);
-	ret.attrs = Object.assign({},baseData.attrs,override.attrs);
-	ret.on = Object.assign({},baseData.on,override.on);
-	ret.scopedSlots = Object.assign({},baseData.scopedSlots,override.scopedSlots);
-	ret.slot = override.slot||baseData.slot;
-	ret.key = override.key || baseData.key;
-	ret.ref = override.ref || baseData.ref;
-	ret.refInFor = override.refInFor || baseData.refInFor;
-	ret.model = override.model || baseData.override;
-	return ret;
+export function getPathInScript(path){
+	let current = __natura.script;
+	const steps = path.split('/');
+	for(let i=0;i<steps.length;++i){
+		if(steps[i]===''){
+			//empty string - skip
+			continue;
+		}
+		current = current[steps[i]];
+	}
+	return current;
 }

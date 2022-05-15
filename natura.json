@@ -1,7 +1,8 @@
 {
 	"name":"npkgvue3",
-	"file":"src/app.js,node_modules/npkg-core/src/*.js,src/page.js",
+	"file":"src/app.js,node_modules/npkg-core/src/*.js,src/components/*.js",
 	"uploadPath":"./dist",
 	"entrypoint":"main.js",
-	"umdName":"npkgvue3"
+	"umdName":"npkgvue3",
+	"defs":["styles-spec.json"]
 }

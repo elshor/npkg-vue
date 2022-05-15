@@ -1,0 +1,2990 @@
+{
+  "entities": {
+    "$type": "entity definition group",
+    "members": [
+      {
+        "name": "animation(style)",
+        "description": "The <code>animation</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand property for <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/animation-name\">animation-name</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/animation-duration\">animation-duration</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/animation-timing-function\">animation-timing-function</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/animation-delay\">animation-delay</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/animation-iteration-count\">animation-iteration-count</a></code>\n and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/animation-direction\">animation-direction</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation (style)",
+        "pattern": "animation (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation"
+        }
+      },
+      {
+        "name": "animation-delay(style)",
+        "description": "The <code>animation-delay</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation delay (style)",
+        "pattern": "animation delay (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation-delay"
+        }
+      },
+      {
+        "name": "animation-direction(style)",
+        "description": "The <code>animation-direction</code> CSS property indicates whether the animation should play in reverse on alternate cycles.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation direction (style)",
+        "pattern": "animation direction (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation-direction"
+        }
+      },
+      {
+        "name": "animation-duration(style)",
+        "description": "The <code>animation-duration</code> CSS property specifies the length of time that an animation should take to complete one cycle.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation duration (style)",
+        "pattern": "animation duration (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation-duration"
+        }
+      },
+      {
+        "name": "animation-iteration-count(style)",
+        "description": "The <code>animation-iteration-count</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property defines the number of times an animation cycle should be played before stopping.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation iteration count (style)",
+        "pattern": "animation iteration count (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation-iteration-count"
+        }
+      },
+      {
+        "name": "animation-name(style)",
+        "description": "The <code>animation-name</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies a list of animations that should be applied to the selected element. Each name indicates a <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/@keyframes\">@keyframes</a></code>\n at-rule that defines the property values for the animation sequence.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation name (style)",
+        "pattern": "animation name (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation-name"
+        }
+      },
+      {
+        "name": "animation-play-state(style)",
+        "description": "The <code>animation-play-state</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property determines whether an animation is running or paused. You can query this property's value to determine whether or not the animation is currently running; in addition, you can set its value to pause and resume playback of an animation.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation play state (style)",
+        "pattern": "animation play state (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation-play-state"
+        }
+      },
+      {
+        "name": "animation-timing-function(style)",
+        "description": "The <code>animation-timing-function</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies how a CSS animation should progress over the duration of each cycle. The possible values are one or several <span class=\"lang lang-en\"><code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/timing-function\">&lt;timing-function&gt;</a></code>\n </span>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "animation timing function (style)",
+        "pattern": "animation timing function (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "animation-timing-function"
+        }
+      },
+      {
+        "name": "azimuth(style)",
+        "description": "In combination with<code> elevation</code>, <code>azimuth</code> enables different audio sources to be positioned spatially for aural presentation. This is important in that it provides a natural way to tell several voices apart, as each can be positioned to originate at a different location on the sound stage. Stereo output produce a lateral sound stage, while binaural headphones and multi-speaker setups allow for a fully three-dimensional stage.",
+        "isa": [
+          "style config"
+        ],
+        "title": "azimuth (style)",
+        "pattern": "azimuth (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "azimuth"
+        }
+      },
+      {
+        "name": "backface-visibility(style)",
+        "description": "The <code>backface-visibility</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property determines whether or not the back face of the element is visible when facing the user. The back face of an element always is a transparent background, letting, when visible, a mirror image of the front face be displayed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "backface visibility (style)",
+        "pattern": "backface visibility (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "backface-visibility"
+        }
+      },
+      {
+        "name": "background(style)",
+        "description": "The<code> background </code>CSS property is a shorthand for setting the individual background values in a single place in the style sheet.<code> background </code>can be used to set the values for one or more of: <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-color\">background-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-image\">background-image</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-position\">background-position</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-repeat\">background-repeat</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-size\">background-size</a></code>\n, and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-attachment\">background-attachment</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background (style)",
+        "pattern": "background (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background"
+        }
+      },
+      {
+        "name": "background-attachment(style)",
+        "description": "If a <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-image\">background-image</a></code>\n is specified, the <code>background-attachment</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property determines whether that image's position is fixed within the viewport, or scrolls along with its containing block.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background attachment (style)",
+        "pattern": "background attachment (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-attachment"
+        }
+      },
+      {
+        "name": "background-clip(style)",
+        "description": "The<code> background-clip </code>CSS property specifies whether an element's background, either the color or image, extends underneath its border.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background clip (style)",
+        "pattern": "background clip (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-clip"
+        }
+      },
+      {
+        "name": "background-color(style)",
+        "description": "The <code>background-color</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the background color of an element, either through a color value or the keyword <code>transparent</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background color (style)",
+        "pattern": "background color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-color"
+        }
+      },
+      {
+        "name": "background-image(style)",
+        "description": "The<code> background-image </code>CSS property sets the background images for an element. The images are drawn on successive stacking context layers, with the first specified being drawn as if it is the closest to the user. The <a title=\"border\" rel=\"internal\" href=\"https://developer.mozilla.org/cn/CSS/border\">borders</a> of the element are then drawn on top of them, and the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-color\">background-color</a></code>\n is drawn beneath them.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background image (style)",
+        "pattern": "background image (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-image"
+        }
+      },
+      {
+        "name": "background-origin(style)",
+        "description": "The<code> background-origin </code>CSS property determines the background positioning area, that is the position of the origin of an image specified using the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-image\">background-image</a></code>\n CSS property.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background origin (style)",
+        "pattern": "background origin (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-origin"
+        }
+      },
+      {
+        "name": "background-position(style)",
+        "description": "The<code> background-position </code>CSS property sets the initial position, relative to the background position layer defined by <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/background-origin\">background-origin</a></code>\n for each defined background image.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background position (style)",
+        "pattern": "background position (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-position"
+        }
+      },
+      {
+        "name": "background-repeat(style)",
+        "description": "The <code>background-repeat</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property defines how background images are repeated. A background image can be repeated along the horizontal axis, the vertical axis, both, or not repeated at all. When the repetition of the image tiles doesn't let them exactly cover the background, the way adjustments are done can be controlled by the author: by default, the last image is clipped, but the different tiles can instead be re-sized, or space can be inserted between the tiles.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background repeat (style)",
+        "pattern": "background repeat (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-repeat"
+        }
+      },
+      {
+        "name": "background-size(style)",
+        "description": "The<code> background-size </code>CSS property specifies the size of the background images.",
+        "isa": [
+          "style config"
+        ],
+        "title": "background size (style)",
+        "pattern": "background size (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "background-size"
+        }
+      },
+      {
+        "name": "bleed(style)",
+        "description": "This property specifies the extent of the page bleed area outside the page box. This property only has effect if crop marks are enabled.",
+        "isa": [
+          "style config"
+        ],
+        "title": "bleed (style)",
+        "pattern": "bleed (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "bleed"
+        }
+      },
+      {
+        "name": "border(style)",
+        "description": "The <code>border</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand property for setting the individual border property values in a single place in the style sheet. <code>border</code> can be used to set the values for one or more of: <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-width\">border-width</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-style\">border-style</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-color\">border-color</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border (style)",
+        "pattern": "border (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border"
+        }
+      },
+      {
+        "name": "border-bottom(style)",
+        "description": "The <code>border-bottom</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand that sets the values of <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-bottom-color\">border-bottom-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-bottom-style\">border-bottom-style</a></code>\n, and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-bottom-width\">border-bottom-width</a></code>\n. These properties describe the bottom border of elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border bottom (style)",
+        "pattern": "border bottom (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-bottom"
+        }
+      },
+      {
+        "name": "border-bottom-color(style)",
+        "description": "The<code> border-bottom-color </code>CSS property sets the color of the bottom border of an element. Note that in many cases the shorthand CSS properties&nbsp; <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-color\">border-color</a></code>\n or <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-bottom\">border-bottom</a></code>\n are more convenient and preferable.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border bottom color (style)",
+        "pattern": "border bottom color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-bottom-color"
+        }
+      },
+      {
+        "name": "border-bottom-left-radius(style)",
+        "description": "The <code>border-bottom-left-radius</code> CSS property sets the rounding of the bottom-left corner of the element. The rounding can be a circle or an ellipse, or if one of the value is <code>0</code> no rounding is done and the corner is square.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border bottom left radius (style)",
+        "pattern": "border bottom left radius (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-bottom-left-radius"
+        }
+      },
+      {
+        "name": "border-bottom-right-radius(style)",
+        "description": "The <code>border-bottom-right-radius</code> CSS property sets the rounding of the bottom-right corner of the element. The rounding can be a circle or an ellipse, or if one of the value is <code>0</code> no rounding is done and the corner is square.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border bottom right radius (style)",
+        "pattern": "border bottom right radius (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-bottom-right-radius"
+        }
+      },
+      {
+        "name": "border-bottom-style(style)",
+        "description": "The <code>border-bottom-style</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the line style of the bottom border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border bottom style (style)",
+        "pattern": "border bottom style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-bottom-style"
+        }
+      },
+      {
+        "name": "border-bottom-width(style)",
+        "description": "The <code>border-bottom-width</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the width of the bottom border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border bottom width (style)",
+        "pattern": "border bottom width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-bottom-width"
+        }
+      },
+      {
+        "name": "border-collapse(style)",
+        "description": "The<code> border-collapse </code>CSS property selects a table's border model. This has a big influence on the look and style of the table cells.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border collapse (style)",
+        "pattern": "border collapse (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-collapse"
+        }
+      },
+      {
+        "name": "border-color(style)",
+        "description": "The<code> border-color </code>CSS property is a shorthand for setting the color of the four sides of an element's border: <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-top-color\">border-top-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-right-color\">border-right-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-bottom-color\">border-bottom-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-left-color\">border-left-color</a></code>\n",
+        "isa": [
+          "style config"
+        ],
+        "title": "border color (style)",
+        "pattern": "border color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-color"
+        }
+      },
+      {
+        "name": "border-image(style)",
+        "description": "The<code> border-image </code>CSS property allows drawing an image on the borders of elements. This makes drawing complex looking widgets much simpler than it has been and removes the need for nine boxes in some cases.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border image (style)",
+        "pattern": "border image (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-image"
+        }
+      },
+      {
+        "name": "border-image-outset(style)",
+        "description": "The <code>border-image-outset </code>property describes, by which amount <dfn id=\"border-image-area\">border image area</dfn> extends beyond the border box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border image outset (style)",
+        "pattern": "border image outset (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-image-outset"
+        }
+      },
+      {
+        "name": "border-image-repeat(style)",
+        "description": "The <code>border-image-repeat</code> CSS property defines how the middle part of a border image is handled to match the size of the border. It has a one-value syntax which describes the behavior for all sides, and a two-value syntax that sets a different value for the horizontal and vertical behavior.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border image repeat (style)",
+        "pattern": "border image repeat (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-image-repeat"
+        }
+      },
+      {
+        "name": "border-image-source(style)",
+        "description": "The <code>border-image-source</code> CSS property defines the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/image\">&lt;image&gt;</a></code>\n to use instead of the style of the border. If this property is set to <code>none</code>, the style defined by <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-style\">border-style</a></code>\n is used instead.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border image source (style)",
+        "pattern": "border image source (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-image-source"
+        }
+      },
+      {
+        "name": "border-image-width(style)",
+        "description": "The <code>border-image-width</code> CSS property defines the offset to use for dividing the border image in nine parts, the top-left corner, central top edge, top-right-corner, central right edge, bottom-right corner, central bottom edge, bottom-left corner, and central right edge. They represent inward distance from the top, right, bottom and right edges.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border image width (style)",
+        "pattern": "border image width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-image-width"
+        }
+      },
+      {
+        "name": "border-left(style)",
+        "description": "The <code>border-left</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand that sets the values of <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-left-color\">border-left-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-left-style\">border-left-style</a></code>\n, and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-left-width\">border-left-width</a></code>\n. These properties describe the left border of elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border left (style)",
+        "pattern": "border left (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-left"
+        }
+      },
+      {
+        "name": "border-left-color(style)",
+        "description": "The<code> border-left-color </code>CSS property sets the color of the bottom border of an element. Note that in many cases the shorthand CSS properties&nbsp; <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-color\">border-color</a></code>\n or <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-left\">border-left</a></code>\n are more convenient and preferable.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border left color (style)",
+        "pattern": "border left color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-left-color"
+        }
+      },
+      {
+        "name": "border-left-style(style)",
+        "description": "The <code>border-left-style</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the line style of the left border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border left style (style)",
+        "pattern": "border left style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-left-style"
+        }
+      },
+      {
+        "name": "border-left-width(style)",
+        "description": "The <code>border-left-width</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the width of the left border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border left width (style)",
+        "pattern": "border left width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-left-width"
+        }
+      },
+      {
+        "name": "border-radius(style)",
+        "description": "The <code>border-radius</code> CSS property allows Web authors to define how rounded border corners are. The curve of each corner is defined using one or two radii, defining its shape: circle or ellipse.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border radius (style)",
+        "pattern": "border radius (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-radius"
+        }
+      },
+      {
+        "name": "border-right(style)",
+        "description": "The <code>border-right</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand that sets the values of <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-right-color\">border-right-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-right-style\">border-right-style</a></code>\n, and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-right-width\">border-right-width</a></code>\n. These properties describe the right border of elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border right (style)",
+        "pattern": "border right (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-right"
+        }
+      },
+      {
+        "name": "border-right-color(style)",
+        "description": "The<code> border-right-color </code>CSS property sets the color of the bottom border of an element. Note that in many cases the shorthand CSS properties&nbsp; <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-color\">border-color</a></code>\n or <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-right\">border-right</a></code>\n are more convenient and preferable.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border right color (style)",
+        "pattern": "border right color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-right-color"
+        }
+      },
+      {
+        "name": "border-right-style(style)",
+        "description": "The <code>border-right-style</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the line style of the right border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border right style (style)",
+        "pattern": "border right style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-right-style"
+        }
+      },
+      {
+        "name": "border-right-width(style)",
+        "description": "The <code>border-right-width</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the width of the right border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border right width (style)",
+        "pattern": "border right width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-right-width"
+        }
+      },
+      {
+        "name": "border-spacing(style)",
+        "description": "The <code>border-spacing</code> CSS property specifies the distance between the borders of adjacent cells (only for the <a title=\"en/CSS/border-collapse\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/border-collapse\">separated borders model</a>). This is equivalent to the <code>cellspacing</code> attribute in presentational HTML, but an optional second value can be used to set different horizontal and vertical spacing.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border spacing (style)",
+        "pattern": "border spacing (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-spacing"
+        }
+      },
+      {
+        "name": "border-style(style)",
+        "description": "The <code>border-style</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand property for setting the line style for all four sides of the elements border.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border style (style)",
+        "pattern": "border style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-style"
+        }
+      },
+      {
+        "name": "border-top(style)",
+        "description": "The <code>border-top</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand that sets the values of <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-top-color\">border-top-color</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-top-style\">border-top-style</a></code>\n, and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-top-width\">border-top-width</a></code>\n. These properties describe the top border of elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border top (style)",
+        "pattern": "border top (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-top"
+        }
+      },
+      {
+        "name": "border-top-color(style)",
+        "description": "The<code> border-top-color </code>CSS property sets the color of the top border of an element. Note that in many cases the shorthand CSS properties&nbsp; <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-color\">border-color</a></code>\n or <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-top\">border-top</a></code>\n are more convenient and preferable.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border top color (style)",
+        "pattern": "border top color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-top-color"
+        }
+      },
+      {
+        "name": "border-top-left-radius(style)",
+        "description": "The <code>border-top-left-radius</code> CSS property sets the rounding of the top-left corner of the element. The rounding can be a circle or an ellipse, or if one of the value is <code>0</code> no rounding is done and the corner is square.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border top left radius (style)",
+        "pattern": "border top left radius (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-top-left-radius"
+        }
+      },
+      {
+        "name": "border-top-right-radius(style)",
+        "description": "The <code>border-top-right-radius</code> CSS property sets the rounding of the top-right corner of the element. The rounding can be a circle or an ellipse, or if one of the value is <code>0</code> no rounding is done and the corner is square.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border top right radius (style)",
+        "pattern": "border top right radius (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-top-right-radius"
+        }
+      },
+      {
+        "name": "border-top-style(style)",
+        "description": "The <code>border-top-style</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the line style of the top border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border top style (style)",
+        "pattern": "border top style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-top-style"
+        }
+      },
+      {
+        "name": "border-top-width(style)",
+        "description": "The <code>border-top-width</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property sets the width of the top border of a box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border top width (style)",
+        "pattern": "border top width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-top-width"
+        }
+      },
+      {
+        "name": "border-width(style)",
+        "description": "The<code> border-width </code>CSS property sets the width of the border of a box. Using the shorthand property <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border\">border</a></code>\n is often more convenient.",
+        "isa": [
+          "style config"
+        ],
+        "title": "border width (style)",
+        "pattern": "border width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "border-width"
+        }
+      },
+      {
+        "name": "bottom(style)",
+        "description": "The <code>bottom</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property participates in specifying the position of <em>positioned elements</em>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "bottom (style)",
+        "pattern": "bottom (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "bottom"
+        }
+      },
+      {
+        "name": "box-shadow(style)",
+        "description": "The <code>box-shadow</code> CSS property accepts one or more shadow effects as a comma-separated list. It allows casting a drop shadow from the frame of almost any element. If a <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/border-radius\">border-radius</a></code>\n is specified on the element with a box shadow, the box shadow takes on the same rounded corners. The z-ordering of multiple box shadows is the same as multiple <a title=\"text-shadow\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/text-shadow\">text shadows</a> (the first specified shadow is on top).",
+        "isa": [
+          "style config"
+        ],
+        "title": "box shadow (style)",
+        "pattern": "box shadow (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "box-shadow"
+        }
+      },
+      {
+        "name": "box-sizing(style)",
+        "description": "The<code> box-sizing </code>CSS property is used to alter the default CSS box model used to calculate widths and heights of elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.",
+        "isa": [
+          "style config"
+        ],
+        "title": "box sizing (style)",
+        "pattern": "box sizing (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "box-sizing"
+        }
+      },
+      {
+        "name": "caption-side(style)",
+        "description": "The <code>caption-side</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property positions the content of a table's <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/HTML/Element/caption\">&lt;caption&gt;</a></code>\n on the specified side.",
+        "isa": [
+          "style config"
+        ],
+        "title": "caption side (style)",
+        "pattern": "caption side (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "caption-side"
+        }
+      },
+      {
+        "name": "clear(style)",
+        "description": "The <code>clear</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies whether an element can be next to <a title=\"en/CSS/float\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/float\">floating</a> elements that precede it or must be moved down (cleared) below them.",
+        "isa": [
+          "style config"
+        ],
+        "title": "clear (style)",
+        "pattern": "clear (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "clear"
+        }
+      },
+      {
+        "name": "clip(style)",
+        "description": "The <code>clip</code> CSS property defines what portion of an element is visible. The <code>clip</code> property applies only to elements with <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/position\">position:absolute</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "clip (style)",
+        "pattern": "clip (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "clip"
+        }
+      },
+      {
+        "name": "color(style)",
+        "description": "The <code>color</code> CSS property sets the foreground color of an element's text content",
+        "isa": [
+          "style config"
+        ],
+        "title": "color (style)",
+        "pattern": "color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "color"
+        }
+      },
+      {
+        "name": "column-count(style)",
+        "description": "The <code>column-count </code>CSS property describes the number of columns of the element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column count (style)",
+        "pattern": "column count (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-count"
+        }
+      },
+      {
+        "name": "column-fill(style)",
+        "description": "The <code>column-fill</code> CSS property controls how contents are partitioned into columns. Contents are either balanced, which means that contents in all columns will have the same height or, when using <code>auto</code>, just take up the room the content needs.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column fill (style)",
+        "pattern": "column fill (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-fill"
+        }
+      },
+      {
+        "name": "column-gap(style)",
+        "description": "The <code>column-gap</code> CSS property sets the size of the gap between columns for elements which are specified to display as a multi-column element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column gap (style)",
+        "pattern": "column gap (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-gap"
+        }
+      },
+      {
+        "name": "column-rule(style)",
+        "description": "In multi-column layouts, the <code>column-rule</code> CSS property specifies a straight line, or \"rule\", to be drawn between each column. It is a convenient shorthand to avoid setting each of the individual <code>column-rule-*</code> properties separately : <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-rule-width\">column-rule-width</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-rule-style\">column-rule-style</a></code>\n and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-rule-color\">column-rule-color</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column rule (style)",
+        "pattern": "column rule (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-rule"
+        }
+      },
+      {
+        "name": "column-rule-color(style)",
+        "description": "The<code> column-rule-color </code>CSS property lets you set the color of the rule drawn between columns in multi-column layouts.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column rule color (style)",
+        "pattern": "column rule color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-rule-color"
+        }
+      },
+      {
+        "name": "column-rule-style(style)",
+        "description": "The<code> column-rule-style </code>CSS property lets you set the style of the rule drawn between columns in multi-column layouts.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column rule style (style)",
+        "pattern": "column rule style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-rule-style"
+        }
+      },
+      {
+        "name": "column-rule-width(style)",
+        "description": "The<code> column-rule-width </code>CSS property lets you set the width of the rule drawn between columns in multi-column layouts.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column rule width (style)",
+        "pattern": "column rule width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-rule-width"
+        }
+      },
+      {
+        "name": "column-span(style)",
+        "description": "The <code>column-span</code> CSS property makes it possible for an element to span across all columns when its value is set to <code>all</code>. An element that spans more than one column is called a <strong>spanning element</strong>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column span (style)",
+        "pattern": "column span (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-span"
+        }
+      },
+      {
+        "name": "column-width(style)",
+        "description": "The <code>column-width</code> CSS property suggests an optimal column width. This is not a absolute value but a mere hint. Browser will adjust the width of the column around that suggested value, allowing to achieve scalable designs that fit different screen size. Especially in presence of the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-count\">column-count</a></code>\n CSS property which has precedence, to set an exact column width, all length values must be specified. In horizontal text these are <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/width\">width</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-width\">column-width</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-gap\">column-gap</a></code>\n, and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-rule-width\">column-rule-width</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "column width (style)",
+        "pattern": "column width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "column-width"
+        }
+      },
+      {
+        "name": "columns(style)",
+        "description": "The <code>columns</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand property allowing to set both the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-width\">column-width</a></code>\n and the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/column-count\">column-count</a></code>\n properties at the same time.",
+        "isa": [
+          "style config"
+        ],
+        "title": "columns (style)",
+        "pattern": "columns (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "columns"
+        }
+      },
+      {
+        "name": "content(style)",
+        "description": "The<code> content </code>CSS property is used with the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/%3Abefore\">:before</a></code>\n and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/%3Aafter\">:after</a></code>\n pseudo-elements to generate content in an element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "content (style)",
+        "pattern": "content (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "content"
+        }
+      },
+      {
+        "name": "counter-increment(style)",
+        "description": "The <code>counter-increment</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is used to increase the value of <a title=\"en/CSS_Counters\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS_Counters\">CSS Counters</a> by a given value. The counter's value can be reset using the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/counter-reset\">counter-reset</a></code>\n CSS property.",
+        "isa": [
+          "style config"
+        ],
+        "title": "counter increment (style)",
+        "pattern": "counter increment (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "counter-increment"
+        }
+      },
+      {
+        "name": "counter-reset(style)",
+        "description": "The <code>counter-reset</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is used to reset <a title=\"en/CSS_Counters\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS_Counters\">CSS Counters</a> to a given value.",
+        "isa": [
+          "style config"
+        ],
+        "title": "counter reset (style)",
+        "pattern": "counter reset (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "counter-reset"
+        }
+      },
+      {
+        "name": "cursor(style)",
+        "description": "The<code> cursor </code>CSS property specifies the mouse cursor displayed when the mouse pointer is over an element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "cursor (style)",
+        "pattern": "cursor (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "cursor"
+        }
+      },
+      {
+        "name": "direction(style)",
+        "description": "The <code>direction</code> CSS property should be set to match the direction of the text: <code>rtl</code> for Hebrew or Arabic text and <code>ltr</code> for other scripts. This should normally be done as part of the document (e.g., using the <code>dir</code> attribute in HTML) rather than through direct use of CSS.",
+        "isa": [
+          "style config"
+        ],
+        "title": "direction (style)",
+        "pattern": "direction (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "direction"
+        }
+      },
+      {
+        "name": "display(style)",
+        "description": "The <code>display</code> CSS property specifies the type of rendering box used for an element. In HTML, default <code>display</code> property values are taken from behaviors described in the HTML specifications or from the browser/user default stylesheet. The default value in XML is <code>inline</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "display (style)",
+        "pattern": "display (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "display"
+        }
+      },
+      {
+        "name": "empty-cells(style)",
+        "description": "The <code>empty-cells </code>CSS property specifies how user agent should render borders and backgrounds around cells that have no visible content.",
+        "isa": [
+          "style config"
+        ],
+        "title": "empty cells (style)",
+        "pattern": "empty cells (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "empty-cells"
+        }
+      },
+      {
+        "name": "float(style)",
+        "description": "The <code>float</code> CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.",
+        "isa": [
+          "style config"
+        ],
+        "title": "float (style)",
+        "pattern": "float (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "float"
+        }
+      },
+      {
+        "name": "font(style)",
+        "description": "The <code>font</code> CSS property is either a shorthand property for setting <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font-style\">font-style</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font-variant\">font-variant</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font-weight\">font-weight</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font-size\">font-size</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/line-height\">line-height</a></code>\n and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font-family\">font-family</a></code>\n, or a way to set the element's font to a system font, using specific keywords.",
+        "isa": [
+          "style config"
+        ],
+        "title": "font (style)",
+        "pattern": "font (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font"
+        }
+      },
+      {
+        "name": "font-family(style)",
+        "description": "The<code> font-family </code>CSS property allows for a prioritized list of font family names and/or generic family names to be specified for the selected element. Unlike most other CSS properties, values are separated by a comma to indicate that they are alternatives. The browser will select the first font on the list that is installed on the computer, or that can be downloaded using the information provided by a <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/@font-face\">@font-face</a></code>\n at-rule.",
+        "isa": [
+          "style config"
+        ],
+        "title": "font family (style)",
+        "pattern": "font family (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font-family"
+        }
+      },
+      {
+        "name": "font-size(style)",
+        "description": "The <code>font-size</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies the size of the font. The font size may, in turn, change the size of other items, since it is used to compute the value of <code>em</code> and <code>ex</code> length units.",
+        "isa": [
+          "style config"
+        ],
+        "title": "font size (style)",
+        "pattern": "font size (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font-size"
+        }
+      },
+      {
+        "name": "font-size-adjust(style)",
+        "description": "The<code> font-size-adjust </code>CSS property specifies that font size should be chosen based on the height of lowercase letters rather than the height of capital letters.",
+        "isa": [
+          "style config"
+        ],
+        "title": "font size adjust (style)",
+        "pattern": "font size adjust (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font-size-adjust"
+        }
+      },
+      {
+        "name": "font-stretch(style)",
+        "description": "The<code> font-stretch </code>CSS property selects a normal, condensed, or extended face from a font family.",
+        "isa": [
+          "style config"
+        ],
+        "title": "font stretch (style)",
+        "pattern": "font stretch (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font-stretch"
+        }
+      },
+      {
+        "name": "font-style(style)",
+        "description": "The<code> font-style </code>CSS property allows<code> italic </code>or<code> oblique </code>faces to be selected within a <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font-family\">font-family</a></code>\n.<br> ",
+        "isa": [
+          "style config"
+        ],
+        "title": "font style (style)",
+        "pattern": "font style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font-style"
+        }
+      },
+      {
+        "name": "font-variant(style)",
+        "description": "The<code> font-variant </code>CSS property selects a<code> normal</code>, or<code> small-caps </code>face from a font family. Setting<code> font-variant </code>is also possible by using the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font\">font</a></code>\n shorthand.",
+        "isa": [
+          "style config"
+        ],
+        "title": "font variant (style)",
+        "pattern": "font variant (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font-variant"
+        }
+      },
+      {
+        "name": "font-weight(style)",
+        "description": "The <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/font-weight\">font-weight</a></code>\n <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies the weight or boldness of the font. However, some fonts are not available in all weights; some are available only on <code>normal</code> and <code>bold</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "font weight (style)",
+        "pattern": "font weight (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "font-weight"
+        }
+      },
+      {
+        "name": "height(style)",
+        "description": "The<code> height </code>CSS property specifies the height of the content area of an element. The <a title=\"en/CSS/Box_model#content\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/box_model#content\">content area</a> is <em>inside</em> the padding, border, and margin of the element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "height (style)",
+        "pattern": "height (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "height"
+        }
+      },
+      {
+        "name": "hyphens(style)",
+        "description": "The <code>hyphens</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property tells the browser how to go about splitting words to improve the layout of text when line-wrapping.",
+        "isa": [
+          "style config"
+        ],
+        "title": "hyphens (style)",
+        "pattern": "hyphens (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "hyphens"
+        }
+      },
+      {
+        "name": "image-rendering(style)",
+        "description": "The <code>image-rendering</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property provides a hint to the user agent about how to handle its image rendering.<br> <code>image-rendering </code>applies to scaled images (and other elements, see below). For example, if the natural size of the image is<em> 100×100px </em>but the page author specifies the dimensions to <code>200×200px</code> (or<code>50×50px</code>), then the image will be upscaled (or downscaled) to the new dimensions using the specified algorithm. Scaling may also apply due to user interaction (zooming).",
+        "isa": [
+          "style config"
+        ],
+        "title": "image rendering (style)",
+        "pattern": "image rendering (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "image-rendering"
+        }
+      },
+      {
+        "name": "left(style)",
+        "description": "The <code>left</code> CSS property specifies part of the position of positioned elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "left (style)",
+        "pattern": "left (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "left"
+        }
+      },
+      {
+        "name": "letter-spacing(style)",
+        "description": "The<code> letter-spacing </code>CSS property specifies spacing behavior between text characters.",
+        "isa": [
+          "style config"
+        ],
+        "title": "letter spacing (style)",
+        "pattern": "letter spacing (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "letter-spacing"
+        }
+      },
+      {
+        "name": "line-height(style)",
+        "description": "On inline elements, the<code> line-height </code>CSS property specifies the height that is used in the calculation of the line box height.<br>\nOn block level elements,<code> line-height </code>specifies the minimal height of line boxes within the element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "line height (style)",
+        "pattern": "line height (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "line-height"
+        }
+      },
+      {
+        "name": "list-style(style)",
+        "description": "The<code> list-style </code>CSS property is a shorthand property for setting <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/list-style-type\">list-style-type</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/list-style-image\">list-style-image</a></code>\n and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/list-style-position\">list-style-position</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "list style (style)",
+        "pattern": "list style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "list-style"
+        }
+      },
+      {
+        "name": "list-style-image(style)",
+        "description": "The<code> list-style-image </code>CSS property sets the image that will be used as the list item marker. It is often more convenient to use the shortcut <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/list-style\">list-style</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "list style image (style)",
+        "pattern": "list style image (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "list-style-image"
+        }
+      },
+      {
+        "name": "list-style-position(style)",
+        "description": "The<code> list-style-position </code>CSS property specifies the position of the marker box in the principal block box. It is often more convenient to use the shortcut <span class=\"lang lang-en\"><code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/list-style\">list-style</a></code>\n</span>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "list style position (style)",
+        "pattern": "list style position (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "list-style-position"
+        }
+      },
+      {
+        "name": "list-style-type(style)",
+        "description": "The<code> list-style-type </code>CSS property specifies appearance of a list item element. As it is the only one who defaults to <code>display:list-item</code>, this is usually a <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/HTML/Element/li\">&lt;li&gt;</a></code>\n element, but can be any element with this <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/display\">display</a></code>\n value.",
+        "isa": [
+          "style config"
+        ],
+        "title": "list style type (style)",
+        "pattern": "list style type (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "list-style-type"
+        }
+      },
+      {
+        "name": "margin(style)",
+        "description": "The<code> margin </code>CSS property sets the margin for all four sides. It is a shorthand to avoid setting each side separately with the other margin properties:<br>\n<code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/margin-top\">margin-top</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/margin-right\">margin-right</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/margin-bottom\">margin-bottom</a></code>\n and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/margin-left\">margin-left</a></code>\n.<br>\nNegative value are also allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "margin (style)",
+        "pattern": "margin (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "margin"
+        }
+      },
+      {
+        "name": "margin-bottom(style)",
+        "description": "The <code>margin-bottom</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property of an element sets the margin space required on the bottom of an element. A negative value is also allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "margin bottom (style)",
+        "pattern": "margin bottom (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "margin-bottom"
+        }
+      },
+      {
+        "name": "margin-left(style)",
+        "description": "The <code>margin-left</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property of an element sets the margin space required on the left side of an element. A negative value is also allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "margin left (style)",
+        "pattern": "margin left (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "margin-left"
+        }
+      },
+      {
+        "name": "margin-right(style)",
+        "description": "The <code>margin-right</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property of an element sets the margin space required on the right side of an element. A negative value is also allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "margin right (style)",
+        "pattern": "margin right (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "margin-right"
+        }
+      },
+      {
+        "name": "margin-top(style)",
+        "description": "The<code> margin-top </code>CSS property of an element sets the margin space required on the top of an element. A negative value is also allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "margin top (style)",
+        "pattern": "margin top (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "margin-top"
+        }
+      },
+      {
+        "name": "marker-offset(style)",
+        "description": "&nbsp;",
+        "isa": [
+          "style config"
+        ],
+        "title": "marker offset (style)",
+        "pattern": "marker offset (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "marker-offset"
+        }
+      },
+      {
+        "name": "marks(style)",
+        "description": "The <code>marks</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property adds crop and/or cross marks to the presentation of the document. <em>Crop marks</em> indicate where the page should be cut. <em>Cross marks</em> are used to align sheets.",
+        "isa": [
+          "style config"
+        ],
+        "title": "marks (style)",
+        "pattern": "marks (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "marks"
+        }
+      },
+      {
+        "name": "max-height(style)",
+        "description": "The<code> max-height </code>CSS property is used to set the maximum height of a given element. It prevents the used value of the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/height\">height</a></code>\n property from becoming larger than the value specified for<code> max-height</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "max height (style)",
+        "pattern": "max height (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "max-height"
+        }
+      },
+      {
+        "name": "max-width(style)",
+        "description": "The<code> max-width </code>CSS property is used to set the maximum width of a given element. It prevents the used value of the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/width\">width</a></code>\n property from becoming larger than the value specified for<code> max-width</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "max width (style)",
+        "pattern": "max width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "max-width"
+        }
+      },
+      {
+        "name": "min-height(style)",
+        "description": "The<code> min-height </code>CSS property is used to set the minimum height of a given element. It prevents the used value of the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/height\">height</a></code>\n property from becoming smaller than the value specified for<code> min-height</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "min height (style)",
+        "pattern": "min height (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "min-height"
+        }
+      },
+      {
+        "name": "min-width(style)",
+        "description": "The<code> min-width </code>CSS property is used to set the minimum width of a given element. It prevents the used value of the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/width\">width</a></code>\n property from becoming smaller than the value specified for<code> min-width</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "min width (style)",
+        "pattern": "min width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "min-width"
+        }
+      },
+      {
+        "name": "opacity(style)",
+        "description": "The <code>opacity</code> CSS property specifies the transparency of an element, that is, the degree to which the background behind the element is overlaid.",
+        "isa": [
+          "style config"
+        ],
+        "title": "opacity (style)",
+        "pattern": "opacity (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "opacity"
+        }
+      },
+      {
+        "name": "orphans(style)",
+        "description": "The <code>orphans</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property refers to the <em>minimum</em> number of lines in a block container that must be left at the bottom of the page.&nbsp; This property is normally used to control how page breaks occur.",
+        "isa": [
+          "style config"
+        ],
+        "title": "orphans (style)",
+        "pattern": "orphans (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "orphans"
+        }
+      },
+      {
+        "name": "outline(style)",
+        "description": "The<code> outline </code>CSS property is a shorthand property for setting one or more of the individual outline properties <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/outline-style\">outline-style</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/outline-width\">outline-width</a></code>\n and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/outline-color\">outline-color</a></code>\n in a single rule. In most cases the use of this shortcut is preferable and more convenient.",
+        "isa": [
+          "style config"
+        ],
+        "title": "outline (style)",
+        "pattern": "outline (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "outline"
+        }
+      },
+      {
+        "name": "outline-color(style)",
+        "description": "The<code> outline-color </code>CSS property sets the color of the outline of an element. An outline is a line that is drawn around elements, outside the border edge, to make the element stand out.",
+        "isa": [
+          "style config"
+        ],
+        "title": "outline color (style)",
+        "pattern": "outline color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "outline-color"
+        }
+      },
+      {
+        "name": "outline-offset(style)",
+        "description": "The<code> outline-offset </code>CSS property is used to set space between an <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/outline\">outline</a></code>\n and the edge or border of an element. An outline is a line that is drawn around elements, outside the border edge.",
+        "isa": [
+          "style config"
+        ],
+        "title": "outline offset (style)",
+        "pattern": "outline offset (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "outline-offset"
+        }
+      },
+      {
+        "name": "outline-style(style)",
+        "description": "The<code> outline-style </code>CSS property is used to set the style of the outline of an element. An outline is a line that is drawn around elements, outside the border edge, to make the element stand out.",
+        "isa": [
+          "style config"
+        ],
+        "title": "outline style (style)",
+        "pattern": "outline style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "outline-style"
+        }
+      },
+      {
+        "name": "outline-width(style)",
+        "description": "The<code> outline-width </code>CSS property is used to set the width of the outline of an element. An outline is a line that is drawn around elements, outside the border edge, to make the element stand out:",
+        "isa": [
+          "style config"
+        ],
+        "title": "outline width (style)",
+        "pattern": "outline width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "outline-width"
+        }
+      },
+      {
+        "name": "overflow(style)",
+        "description": "The<code> overflow </code>CSS property specifies whether to clip content, render scroll bars or display overflow content of a block-level element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "overflow (style)",
+        "pattern": "overflow (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "overflow"
+        }
+      },
+      {
+        "name": "overflow-x(style)",
+        "description": "The <code>overflow-x </code><a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies whether to clip content, render a scroll bar or display overflow content of a block-level element, when it overflows at the left and right edges.",
+        "isa": [
+          "style config"
+        ],
+        "title": "overflow x (style)",
+        "pattern": "overflow x (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "overflow-x"
+        }
+      },
+      {
+        "name": "padding(style)",
+        "description": "The<code> padding </code>CSS property sets the required padding space on all sides of an element. The <a title=\"http://developer.mozilla.org/en/CSS/Box_model#padding\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/Box_model#padding\">padding area</a> is the space between the content of the element and its border. Negative values are not allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "padding (style)",
+        "pattern": "padding (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "padding"
+        }
+      },
+      {
+        "name": "padding-bottom(style)",
+        "description": "The <code>padding-bottom</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property of an element sets the padding space required on the bottom of an element. The <a title=\"http://developer.mozilla.org/en/CSS/Box_model#padding\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/box_model#padding\">padding area</a> is the space between the content of the element and it's border. A negative value is not allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "padding bottom (style)",
+        "pattern": "padding bottom (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "padding-bottom"
+        }
+      },
+      {
+        "name": "padding-left(style)",
+        "description": "The <code>padding-left</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property of an element sets the padding space required on the left side of an element. The <a title=\"http://developer.mozilla.org/en/CSS/Box_model#padding\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/box_model#padding\">padding area</a> is the space between the content of the element and it's border. A negative value is not allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "padding left (style)",
+        "pattern": "padding left (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "padding-left"
+        }
+      },
+      {
+        "name": "padding-right(style)",
+        "description": "The <code>padding-right</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property of an element sets the padding space required on the right side of an element. The <a title=\"http://developer.mozilla.org/en/CSS/Box_model#padding\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/box_model#padding\">padding area</a> is the space between the content of the element and its border. Negative values are not allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "padding right (style)",
+        "pattern": "padding right (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "padding-right"
+        }
+      },
+      {
+        "name": "padding-top(style)",
+        "description": "The <code>padding-top</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property of an element sets the padding space required on the top of an element. The <a title=\"http://developer.mozilla.org/en/CSS/Box_model#padding\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/box_model#padding\">padding area</a> is the space between the content of the element and it's border. A negative values is not allowed.",
+        "isa": [
+          "style config"
+        ],
+        "title": "padding top (style)",
+        "pattern": "padding top (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "padding-top"
+        }
+      },
+      {
+        "name": "page-break-after(style)",
+        "description": "The <code>page-break-after</code> CSS property adjusts page breaks <em>after</em> the current element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "page break after (style)",
+        "pattern": "page break after (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "page-break-after"
+        }
+      },
+      {
+        "name": "page-break-before(style)",
+        "description": "The <code>page-break-before</code> CSS property adjusts page breaks <em>before</em> the current element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "page break before (style)",
+        "pattern": "page break before (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "page-break-before"
+        }
+      },
+      {
+        "name": "page-break-inside(style)",
+        "description": "The <code>page-break-inside</code> CSS property adjusts page breaks <em>inside</em> the current element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "page break inside (style)",
+        "pattern": "page break inside (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "page-break-inside"
+        }
+      },
+      {
+        "name": "perspective(style)",
+        "description": "The <code>perspective</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property determines the distance between the z=0 plane and the user in order to give to the 3D-positioned element some perspective. Each 3D element that is placed between the z=0 and the user is enlarged, each 3D-element with z&lt;0 is shrinked. How much deformation is defined by the value of this property.",
+        "isa": [
+          "style config"
+        ],
+        "title": "perspective (style)",
+        "pattern": "perspective (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "perspective"
+        }
+      },
+      {
+        "name": "perspective-origin(style)",
+        "description": "The <code>perspective-origin</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property determines the position the viewer is looking at. It is used as the <em>vanishing point</em> by the <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/perspective\">perspective</a></code>\n property.",
+        "isa": [
+          "style config"
+        ],
+        "title": "perspective origin (style)",
+        "pattern": "perspective origin (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "perspective-origin"
+        }
+      },
+      {
+        "name": "position(style)",
+        "description": "The<code> position </code>CSS property chooses alternative rules for positioning elements, designed to be useful for scripted animation effects.",
+        "isa": [
+          "style config"
+        ],
+        "title": "position (style)",
+        "pattern": "position (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "position"
+        }
+      },
+      {
+        "name": "quotes(style)",
+        "description": "The <code>quotes</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property indicates how user agents should render quotation marks.",
+        "isa": [
+          "style config"
+        ],
+        "title": "quotes (style)",
+        "pattern": "quotes (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "quotes"
+        }
+      },
+      {
+        "name": "resize(style)",
+        "description": "The <code>resize</code> CSS property lets you control the resizability of an element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "resize (style)",
+        "pattern": "resize (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "resize"
+        }
+      },
+      {
+        "name": "right(style)",
+        "description": "The <code>right</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies part of the position of positioned elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "right (style)",
+        "pattern": "right (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "right"
+        }
+      },
+      {
+        "name": "tab-size(style)",
+        "description": "The <code>tab-size</code> CSS property is used to customize the width of a tab (<code>U+0009</code>) character.",
+        "isa": [
+          "style config"
+        ],
+        "title": "tab size (style)",
+        "pattern": "tab size (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "tab-size"
+        }
+      },
+      {
+        "name": "table-layout(style)",
+        "description": "The <code>table-layout</code> CSS property defines the algorithm to be used to layout the table cells, rows, and columns.",
+        "isa": [
+          "style config"
+        ],
+        "title": "table layout (style)",
+        "pattern": "table layout (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "table-layout"
+        }
+      },
+      {
+        "name": "text-align(style)",
+        "description": "The<code> text-align </code>CSS property describes how inline content like text is aligned in its parent block element.<code> text-align </code>does not control the alignment of block elements itself, only their inline content.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text align (style)",
+        "pattern": "text align (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-align"
+        }
+      },
+      {
+        "name": "text-align-last(style)",
+        "description": "The <code>text-align-last</code> CSS property describes how the last line of a block or a line right before a forced line break is aligned.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text align last (style)",
+        "pattern": "text align last (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-align-last"
+        }
+      },
+      {
+        "name": "text-decoration(style)",
+        "description": "The<code> text-decoration </code>CSS property is used to set the text formattings <code>underline, overline, line-through</code> and <code>blink</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text decoration (style)",
+        "pattern": "text decoration (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-decoration"
+        }
+      },
+      {
+        "name": "text-decoration-color(style)",
+        "description": "The <code>text-decoration-color</code> CSS property sets the color used when drawing underlines, overlines, or strike-throughs specified by <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/text-decoration-line\">text-decoration-line</a></code>\n. This is the preferred way to color these text decorations, rather than using combinations of other HTML&nbsp;elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text decoration color (style)",
+        "pattern": "text decoration color (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-decoration-color"
+        }
+      },
+      {
+        "name": "text-decoration-line(style)",
+        "description": "The <code>text-decoration-line</code> CSS property sets what kind of line decorations are added to an element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text decoration line (style)",
+        "pattern": "text decoration line (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-decoration-line"
+        }
+      },
+      {
+        "name": "text-decoration-style(style)",
+        "description": "The <code>text-decoration-style</code> CSS property defines the style of the lines specified by <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/text-decoration-line\">text-decoration-line</a></code>\n. The style applies to all lines, there is no way to define different style for each of the line defined by <code>text-decoration-line</code>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text decoration style (style)",
+        "pattern": "text decoration style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-decoration-style"
+        }
+      },
+      {
+        "name": "text-indent(style)",
+        "description": "The<code> text-indent </code>CSS property specifies how much horizontal space should be left before beginning of the first line of the text content of an element. Horizontal spacing is with respect to the left (or right, for right-to-left layout) edge of the containing block element's box.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text indent (style)",
+        "pattern": "text indent (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-indent"
+        }
+      },
+      {
+        "name": "text-shadow(style)",
+        "description": "The<code> text-shadow </code>CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/text-decoration\">text-decorations</a></code>\n of the element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text shadow (style)",
+        "pattern": "text shadow (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-shadow"
+        }
+      },
+      {
+        "name": "text-transform(style)",
+        "description": "The <code>text-transform</code> CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.",
+        "isa": [
+          "style config"
+        ],
+        "title": "text transform (style)",
+        "pattern": "text transform (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "text-transform"
+        }
+      },
+      {
+        "name": "top(style)",
+        "description": "The <code>top</code> CSS property specifies part of the position of positioned elements. It has no effect on non-positioned elements.",
+        "isa": [
+          "style config"
+        ],
+        "title": "top (style)",
+        "pattern": "top (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "top"
+        }
+      },
+      {
+        "name": "transform(style)",
+        "description": "The <code>transform</code> CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set.",
+        "isa": [
+          "style config"
+        ],
+        "title": "transform (style)",
+        "pattern": "transform (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transform"
+        }
+      },
+      {
+        "name": "transform-origin(style)",
+        "description": "The <code>transform-origin</code> CSS property lets you modify the origin for transformations of an element. For example, the transform-origin of the <code>rotate()</code> function is the centre of rotation. (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)",
+        "isa": [
+          "style config"
+        ],
+        "title": "transform origin (style)",
+        "pattern": "transform origin (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transform-origin"
+        }
+      },
+      {
+        "name": "transform-style(style)",
+        "description": "The <code>transform-style</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property determines if the children of the element are positioned in the 3D-space or are flattened in the plane of the element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "transform style (style)",
+        "pattern": "transform style (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transform-style"
+        }
+      },
+      {
+        "name": "transition(style)",
+        "description": "The<code> transition </code><a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is a shorthand property for <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/transition-property\">transition-property</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/transition-duration\">transition-duration</a></code>\n, <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/transition-timing-function\">transition-timing-function</a></code>\n, and <code><a rel=\"custom\" href=\"https://developer.mozilla.org/en/CSS/transition-delay\">transition-delay</a></code>\n.",
+        "isa": [
+          "style config"
+        ],
+        "title": "transition (style)",
+        "pattern": "transition (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transition"
+        }
+      },
+      {
+        "name": "transition-delay(style)",
+        "description": "The<code> transition-delay </code><a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies the amount of time to wait between a change being requested to a property that is to be transitioned and the start of the <a title=\"en/CSS/CSS transitions\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/CSS_transitions\">transition effect</a>.",
+        "isa": [
+          "style config"
+        ],
+        "title": "transition delay (style)",
+        "pattern": "transition delay (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transition-delay"
+        }
+      },
+      {
+        "name": "transition-duration(style)",
+        "description": "The<code> transition-duration </code><a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies the number of seconds or milliseconds a transition animation should take to complete. By default, the value is 0s, meaning that no animation will occur.",
+        "isa": [
+          "style config"
+        ],
+        "title": "transition duration (style)",
+        "pattern": "transition duration (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transition-duration"
+        }
+      },
+      {
+        "name": "transition-property(style)",
+        "description": "The <code>transition-property</code> CSS property is used to specify the names of CSS properties to which a <a title=\"en/CSS/CSS transitions\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/CSS_transitions\">transition effect</a> should be applied.",
+        "isa": [
+          "style config"
+        ],
+        "title": "transition property (style)",
+        "pattern": "transition property (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transition-property"
+        }
+      },
+      {
+        "name": "transition-timing-function(style)",
+        "description": "The<code> transition-timing-function </code>CSS property is used to describe how the intermediate values of the CSS&nbsp;properties being affected by a <a title=\"en/CSS/CSS transitions\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/CSS_transitions\">transition effect</a> are calculated. This in essence lets you establish an acceleration curve, so that the speed of the transition can vary over its duration.",
+        "isa": [
+          "style config"
+        ],
+        "title": "transition timing function (style)",
+        "pattern": "transition timing function (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "transition-timing-function"
+        }
+      },
+      {
+        "name": "vertical-align(style)",
+        "description": "The <code>vertical-align</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property specifies the vertical alignment of an inline or table-cell element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "vertical align (style)",
+        "pattern": "vertical align (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "vertical-align"
+        }
+      },
+      {
+        "name": "visibility(style)",
+        "description": "The<code> visibility </code>CSS property is used for two things:",
+        "isa": [
+          "style config"
+        ],
+        "title": "visibility (style)",
+        "pattern": "visibility (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "visibility"
+        }
+      },
+      {
+        "name": "white-space(style)",
+        "description": "The<code> white-space </code>CSS property is used to to describe how whitespace inside the element is handled.",
+        "isa": [
+          "style config"
+        ],
+        "title": "white space (style)",
+        "pattern": "white space (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "white-space"
+        }
+      },
+      {
+        "name": "widows(style)",
+        "description": "where:",
+        "isa": [
+          "style config"
+        ],
+        "title": "widows (style)",
+        "pattern": "widows (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "widows"
+        }
+      },
+      {
+        "name": "width(style)",
+        "description": "The<code> width </code>CSS property specifies the width of the content area of an element. The <a title=\"en/CSS/box_model#content\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS/box_model#content\">content area</a> is <em>inside</em> the padding, border, and margin of the element.",
+        "isa": [
+          "style config"
+        ],
+        "title": "width (style)",
+        "pattern": "width (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "width"
+        }
+      },
+      {
+        "name": "word-spacing(style)",
+        "description": "The<code> word-spacing </code>CSS property specifies spacing behavior between tags and words.",
+        "isa": [
+          "style config"
+        ],
+        "title": "word spacing (style)",
+        "pattern": "word spacing (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "word-spacing"
+        }
+      },
+      {
+        "name": "word-wrap(style)",
+        "description": "The <code>word-wrap</code> <a title=\"CSS\" rel=\"internal\" href=\"https://developer.mozilla.org/en/CSS\">CSS</a> property is used to to specify whether or not the browser is allowed to break lines within words in order to prevent overflow when an otherwise unbreakable string is too long to fit.",
+        "isa": [
+          "style config"
+        ],
+        "title": "word wrap (style)",
+        "pattern": "word wrap (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "word-wrap"
+        }
+      },
+      {
+        "name": "z-index(style)",
+        "description": "The<code> z-index </code>CSS property specifies the z-order of an element and its descendants. When elements overlap, z-order determines which one covers the other. An element with a larger z-index generally covers an element with a lower one.",
+        "isa": [
+          "style config"
+        ],
+        "title": "z index (style)",
+        "pattern": "z index (style): <<value>>",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "$generic": "component config",
+        "$specialized": {
+          "type": "style",
+          "key": "z-index"
+        }
+      }
+    ]
+  }
+}

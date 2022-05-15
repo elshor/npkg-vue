@@ -35,10 +35,26 @@ n-placeholder-icon{
 }
 .n-placeholder-menu{
 	overflow-y:auto;
+	display: none;
 	visibility: initial;
 	opacity: initial;
 	max-height:20em;
 	z-index: 1070 !important;
+	position: absolute;
+	inset: 0px 0px auto auto;
+	margin: 0px;
+	transform: translate3d(-28.8px, -25.6px, 0px);
+	border: 0;
+	box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.08);
+	min-width: 10rem;
+	padding: 0;
+	color: #47404f;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border-radius: 0.25rem;
+	font-size: 1em !important;
 }
 .n-placeholder-menu[data-show="true"]{
 	display:block;
@@ -51,7 +67,6 @@ n-placeholder-icon{
 }
 
 .n-placeholder{
-	max-width: 32px;
 	max-height: 32px;
 	display: flex;
 	flex-grow: 0 !important;
@@ -78,11 +93,7 @@ n-placeholder-icon{
 }
 
 .n-placeholder-menu .dropdown-header{
-  margin-top: -8px;
   font-size: 1em;
-}
-.n-placeholder-menu{
-  font-size: 1em !important;
 }
 .n-viewport-overlay{
 	position:fixed;
@@ -93,4 +104,33 @@ n-placeholder-icon{
 	display:none;
 	z-index: 1040;
   background-color: rgba(0,0,0,0.1);
+}
+.n-dropdown-item{
+	padding: .42rem 1.5rem;
+	display: block;
+	width: 100%;
+	clear: both;
+	font-weight: 400;
+	text-align: inherit;
+	white-space: nowrap;
+	background-color: transparent;
+	border: 0;
+}
+.n-dropdown-item:hover{
+	background-color: #f8f9fa;
+}
+.n-dropdown-header{
+	display: block;
+	padding: 0.5rem 1.5rem;
+	margin-bottom: 0;
+	color: #70657b;
+	white-space: nowrap;
+	;
+}
+.n-placeholder-bar{
+	background-color: #579317;
+	color: white;
+}
+.n-placeholder-bar span{
+	margin: 5px;
 }

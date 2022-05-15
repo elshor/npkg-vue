@@ -58,16 +58,30 @@ function getLibEntry(spec){
  */
  function getData(spec,npath){
 	const ref = spec.ref;
+	const styleRaw = spec.style||[];
+	const propsRaw = spec.props||{};
+	const classesRaw = spec.classes||[];
+
+	//process component config property
+	(spec.config||[]).forEach(config=>{
+		if(config.type === 'style'){
+			styleRaw.push(config);
+		}else if(config.type === 'class'){
+			classesRaw.push(config);
+		}else{
+			propsRaw[config.key] = config.value;
+		}
+	})
 	
-	const props = Object.entries(spec.props||{}).map(
+	const props = Object.entries(propsRaw).map(
 		entry=>dataEntry(entry,(npath||'')+'/props'));
 	const display = Object.entries(spec.display||{})
 		.filter(([key])=>key!=='ref')//ignore ref property
 		.map(entry=>dataEntry(entry,(npath||'')+'/display'));
-	const style = (spec.style||[]).map(entry=>styleEntry(entry));
+	const style = (styleRaw).map(entry=>styleEntry(entry));
 	const attrs = Object.entries(spec.attrs||{}).map(dataEntry);
 	const on = Object.entries(spec.on||{}).map(entry=>dataEntry(entry,null,true));
-	const classes = (spec.classes||[]).map((item,index)=>dataEntry([index,item]));
+	const classes = classesRaw.map(item=>dataEntry([item.key,item.value]));
 	if(spec.$path){
 		props.push({key:'naturaPath',value:spec.$path});
 	}
@@ -123,7 +137,6 @@ function processSlots(data,entry,children,npath){
 		const element = getRenderInputFromScript(value,npath? (npath+'/props/'+key):null);
 		if(element){
 			element.data.slot = slotEntry.name || 'default';
-			console.log('... element data slot is',slotEntry.name);
 			children.push(... asArray(element));
 		}
 	});

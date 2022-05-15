@@ -16,8 +16,10 @@
   "dependencies": {
     "@popperjs/core": "^2.11.2",
     "npkg-core": "file:../npkg-core",
+    "tippy.js": "^6.3.7",
     "vue": "^3",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vue-tippy": "^4.13.0"
   },
   "devDependencies": {
     "css-loader": "^6.6.0",

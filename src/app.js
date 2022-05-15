@@ -6,15 +6,16 @@ import * as VuePackage from 'vue'
 import createRouter from './create-router';
 import globalMixin from './global-mixin';
 import { fnComponent } from './fn-component';
-import './placeholder';
 import './style/placeholder.css'
 export * from 'npkg-core';
-export {PlainPage} from './page';
-import {Placeholder} from './placeholder'
+export {PlainPage} from './components/page';
+export {DivContainer} from './components/div-container'
+export { SpanText } from './components/span-text';
+import {Placeholder} from './components/placeholder'
 import callPlugin from './call-plugin'
 import { RouterView } from 'vue-router';
 
-window.vue = VuePackage;
+window.vue = window.Vue = VuePackage;
 let mountedVueInstance = null;
 const {createApp,reactive,h,} = VuePackage;
 /**
@@ -93,6 +94,7 @@ function mountVue(element,script){
 		},
 		watch:{
 			editId(_id){
+				//whenver edit count changes, rerender
 				this.generatedRenderFunction = fnComponent(__natura.script.component,'/component');
 				this.$forceUpdate();
 			},
@@ -110,10 +112,10 @@ function mountVue(element,script){
 	mountedVueInstance = createApp(mainVueComponent);
 	mountedVueInstance.component('placeholder',Placeholder);
 	mountedVueInstance.mixin(globalMixin);
-	const router = createRouter(options,script,'/');
+	const {router, updater} = createRouter(options,script,'/');
 	mountedVueInstance.use(router);
 	callPlugin('beforeAppMount',mountedVueInstance);
-	mountedVueInstance.mount(element)
+	mountedVueInstance.mount(element);
 	callPlugin('appMounted',mountedVueInstance);
 }
 

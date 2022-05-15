@@ -6,6 +6,7 @@
 import {getRenderInputFromScript} from './prepare-render-function'
 import { isDevMode } from "./utils";
 import {h, isVNode} from 'vue'
+import {Placeholder} from './components/placeholder'
 
 function addEntries(target,source){
 	source = source || {};
@@ -91,7 +92,6 @@ function renderInput(input,thisObject,h,parentInput){
 }
 
 function renderChildren(input,thisObject,h,data){
-	console.log('renderChildren',input.children.length,input.children);
 	const slots = {};
 	input.children.forEach(child=>{
 		const slot = child.data.slot || 'default';
@@ -165,7 +165,7 @@ function calcData(data,thisObject,parentData,entry,spec){
 	if(Object.keys(styleObject).length > 0){
 		ret.style = styleObject;
 	}
-	ret.class = Object.values(calcObject(data.classes,thisObject));
+	ret.class = calcObject(data.classes,thisObject);
 	Object.entries(calcObject(data.attrs,thisObject)).forEach(([key,value])=>{
 		if(value !== undefined){
 			ret[key] = value;
@@ -238,24 +238,23 @@ function processPlaceholders(slots,entry,h,path='',usedSlots){
 	//this function assumes a vue component named plaeholder is registered
 	if(isDevMode() && getLibOption(entry,'placeholders')){
 		getLibOption(entry,'placeholders').forEach(ph=>{
-			if(ph.slot && (usedSlots||[]).includes(ph.slot)){
+			if(ph.prop && (usedSlots||[]).includes(ph.prop)){
 				//this slot is not missing - don't add it
 				return;
 			}
+			const slot = ph.slot||'default';
 			const relativePath = (ph.prop||ph.slot)? '/props/' + (ph.prop||ph.slot) : '/children/-1';
-			if(!slots[ph.slot||'default']){
-				slots[ph.slot||'default'] = [];
+			if(!slots[slot]){
+				slots[slot] = [];
 			}
-			slots[ph.slot||'default'].push(h(
-				'placeholder',
+			slots[slot].push(h(
+				Placeholder,
 				{
-					props:{
-						tooltip:ph.tooltip,
-						size:ph.size,
-						naturaPath:path + relativePath
-					},
-					class:ph.class,
-					slot:ph.slot
+					tooltip:ph.tooltip,
+					size:ph.size,
+					naturaPath:path + relativePath,
+					menuTitle:ph.menuTitle,
+					barText:ph.barText,
 				}
 			))
 		})

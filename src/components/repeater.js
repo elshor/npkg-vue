@@ -4,7 +4,7 @@
  */
 
 import { isDevMode } from "../utils";
-import listMixin from "./mixins/list-mixin"
+import listMixin from "../mixins/list-mixin"
 
 /**
  * Repeat a block for each item in a collection.
