@@ -110,6 +110,7 @@ function mountVue(element,script){
 	}
 	
 	mountedVueInstance = createApp(mainVueComponent);
+	mountedVueInstance.config.unwrapInjectedRef = true;
 	mountedVueInstance.component('placeholder',Placeholder);
 	mountedVueInstance.mixin(globalMixin);
 	const {router, updater} = createRouter(options,script,'/');
