@@ -59,10 +59,7 @@ function routeEntry(naturaPath,{component,name,path,routerHolder}={}){
 	const spec = getPathInScript(naturaPath);
 	const children = [];
 	(spec.subPages||[]).forEach((page,index)=>{
-		const childNpath = naturaPath+'subPages/'+index;
-		const childComponent = isDevMode()? 
-			PagePlaceholder(generateComponent(page,childNpath),naturaPath + 'subPages/-1',routerHolder):
-			generateComponent(page,naturaPath+'subPages/'+index);
+		const childComponent = generateComponent(page,naturaPath+'subPages/'+index);
 		children.push(
 			routeEntry(naturaPath+'subPages/'+index, {component:childComponent,routerHolder}),
 			routeEntry(naturaPath+'subPages/'+index, {component:childComponent,name:page.$id,path:page.$id,routerHolder}),
