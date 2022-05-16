@@ -236,7 +236,8 @@ function getLibOption(entry,name){
 
 function processPlaceholders(slots,entry,h,path='',usedSlots){
 	//this function assumes a vue component named plaeholder is registered
-	if(isDevMode() && getLibOption(entry,'placeholders')){
+	const placeholders = getLibOption(entry,'placeholders');
+	if(isDevMode() && Array.isArray(placeholders)){
 		getLibOption(entry,'placeholders').forEach(ph=>{
 			if(ph.prop && (usedSlots||[]).includes(ph.prop)){
 				//this slot is not missing - don't add it
