@@ -130,7 +130,21 @@ n-placeholder-icon{
 .n-placeholder-bar{
 	background-color: #579317;
 	color: white;
+	padding: 7px;
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
 }
 .n-placeholder-bar span{
 	margin: 5px;
+	line-height: 24px;
+	margin-right: 5px;
+	padding: 2px;
+	align-items: center;
+}
+.n-placeholder-bar .n-placeholder-icon{
+	margin: 5px;
+	color: white;
+	background-color: #579317;
+
 }
