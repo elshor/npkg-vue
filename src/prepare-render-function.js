@@ -68,8 +68,10 @@ function getLibEntry(spec){
 			styleRaw.push(config);
 		}else if(config.type === 'class'){
 			classesRaw.push(config);
-		}else{
+		}else if(isValidAttributeName(config.key)){
 			propsRaw[config.key] = config.value;
+		}else{
+			console.error('Error, using an illegal property key',config.key);
 		}
 	})
 	
@@ -161,4 +163,8 @@ function asArray(input){
 	}else{
 		return [input];
 	}
+}
+
+function isValidAttributeName(name){
+	return name.toString().match(/^[\w-_\:\.]+$/)
 }
